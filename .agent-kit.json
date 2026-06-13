@@ -1,0 +1,15 @@
+{
+  "name": "TODO-project-name",
+  "verify": {
+    "fast": null,
+    "deep": null,
+    "ship": null
+  },
+  "verifyCommand": null,
+  "verifyPaths": [],
+  "broadTaskTriggers": [],
+  "profiles": [],
+  "evidenceGates": [],
+  "forbiddenTerms": [],
+  "notes": "verify.fast runs in the post-edit hook (keep it cheap); verify.deep/ship are for the orchestrator and pre-PR/CI; verifyCommand is a back-compat alias. verifyPaths: optional globs (* and **) - the post-edit hook only runs after editing a matching file (empty = run on every edit). broadTaskTriggers: extra keywords for the fan-out nudge. profiles: optional component profiles [{name, status: active|dormant, doc}] (empty = single flat project); see docs/profiles/_TEMPLATE.md. evidenceGates: optional [{changed:[globs], requires:[files], note}] checked by tools/evidence-gate.mjs. forbiddenTerms: strings that must NOT appear in active instruction/skill files (checked by tools/check-kit.mjs) - useful after cloning the kit to catch leftover rules from another stack. name shows in session-start context."
+}
